@@ -22,7 +22,7 @@ private TreeSet<Producto> productos;
     public GestionProducto(TreeSet<Producto> productos) {
         initComponents();
         this.productos=productos;
-        llenarCombo();
+      
     }
 
     /**
@@ -293,17 +293,8 @@ private TreeSet<Producto> productos;
         }
     }//GEN-LAST:event_jbBuscarActionPerformed
 
-    private void llenarCombo(){
+ 
     
-        Categoria limpieza=new Categoria(1,"Limpieza");
-        Categoria comestible=new Categoria(2,"Comestible");
-        Categoria perfumeria=new Categoria(3,"Perfumeria");
-        
-        jcProducto.addItem(limpieza);
-        jcProducto.addItem(comestible);
-        jcProducto.addItem(perfumeria);
-        
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

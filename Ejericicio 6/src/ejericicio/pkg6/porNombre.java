@@ -7,7 +7,7 @@ public class porNombre extends javax.swing.JInternalFrame {
     DefaultTableModel modelo= new DefaultTableModel();
     TreeSet<Producto>productos;
     
-        private void agregarCabecera(){
+        private void armarCabecera(){
         modelo.addColumn("Codigo");
         modelo.addColumn("Descripcion");
         modelo.addColumn("Precio");
@@ -19,6 +19,7 @@ public class porNombre extends javax.swing.JInternalFrame {
     public porNombre(TreeSet<Producto> productos) {
         initComponents();
         borrarFilas();
+        armarCabecera();
         this.productos = productos;
     }
 
@@ -109,8 +110,8 @@ public class porNombre extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
     
     public void borrarFilas(){
-        int f=modelo.getRowCount()-1;
-        for(;f>=0;f--){
+        int filas=modelo.getRowCount()-1;
+        for(int f=filas;f>=0 ;f--){
             modelo.removeRow(f);
         }
     }

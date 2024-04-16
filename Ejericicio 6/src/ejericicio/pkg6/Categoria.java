@@ -3,13 +3,14 @@ package ejericicio.pkg6;
 public class Categoria {
     private int codigo;
     private String nombre;
-
+  
     public Categoria() {
     }
 
-    public Categoria(int codigo, String nombre) {
+    public Categoria(int codigo, String nombre,String categoria) {
         this.codigo = codigo;
         this.nombre = nombre;
+       
     }
 
     public int getCodigo() {
@@ -28,9 +29,15 @@ public class Categoria {
         this.nombre = nombre;
     }
     
-    
+    /**
+     *
+     * @return
+     */
+    @Override
     public String toString(){
     
         return nombre;
     }
+ 
 }
+

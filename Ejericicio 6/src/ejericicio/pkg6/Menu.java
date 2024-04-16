@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ejericicio.pkg6;
-
+import ejericicio.pkg6.PorRubro;
 import ejericicio.pkg6.porNombre;
 import ejericicio.pkg6.Producto;
 import java.util.TreeSet;
@@ -72,6 +72,11 @@ private TreeSet<Producto> productos=new TreeSet<>();
         jMenu2.setText("consultas");
 
         jMenuItem3.setText("Por rubro");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuItem2.setText("Por nombre");
@@ -83,6 +88,11 @@ private TreeSet<Producto> productos=new TreeSet<>();
         jMenu2.add(jMenuItem2);
 
         jMenuItem4.setText("Por precio");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -124,8 +134,21 @@ private TreeSet<Producto> productos=new TreeSet<>();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+             escritorio.removeAll();
+       escritorio.repaint();
+       PorRubro prub= new PorRubro(productos);
+       prub.setVisible(true);
+       escritorio.add(prub);
+       
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
